@@ -712,6 +712,8 @@ GameObject:
   - component: {fileID: 2108301322}
   - component: {fileID: 2108301321}
   - component: {fileID: 2108301320}
+  - component: {fileID: 2108301326}
+  - component: {fileID: 2108301325}
   m_Layer: 0
   m_Name: lilguy
   m_TagString: Player
@@ -733,6 +735,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   inputsystem: {fileID: 715833090}
+  startMaxhealth: 5
+  startscore: 0
 --- !u!61 &2108301321
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -876,6 +880,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2108301325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108301319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a8c9a7ffe4ac848b1312c122936bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSquare: {fileID: 2108301319}
+  swipeSpeed: 0.01
+--- !u!114 &2108301326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108301319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8c1b995e29f8d42931abdd4a66932d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  square: {fileID: 2108301319}
+  holdTime: 0.2
 --- !u!1001 &1325578747036850557
 PrefabInstance:
   m_ObjectHideFlags: 0

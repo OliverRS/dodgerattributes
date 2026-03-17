@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefab;
 
 
 
@@ -26,7 +26,9 @@ public class GameManager : MonoBehaviour
 
         Vector2 worldPos = Camera.main.ViewportToWorldPoint(viewPortPos);
 
-        Instantiate (enemyPrefab, worldPos, Quaternion.identity);
+        int randEnemy = Random.Range(0,enemyPrefab.Length);
+
+        Instantiate (enemyPrefab[randEnemy], worldPos, Quaternion.identity);
 
         score++;
 
